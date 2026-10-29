@@ -374,7 +374,7 @@ Your Name
 
 ## 📞 Support
 
-For support, email - dhruvamaheshwari0@gmail.com or create an issue in the repository.
+For support, email - aasthaghosh15@gmail.com or create an issue in the repository.
 
 ---
 
