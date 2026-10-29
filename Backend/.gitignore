@@ -1,5 +1,8 @@
 node_modules
 package-lock
 .env
+.env.*
+*.env
+.env.local
 dotenv
 createAdmin.js

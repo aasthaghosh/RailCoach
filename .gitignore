@@ -1,0 +1,24 @@
+# Environment variables
+.env
+.env.*
+*.env
+.env.local
+
+# Sensitive / Admin scripts
+createAdmin.js
+Backend/createAdmin.js
+
+# Prep guides and notes
+interview_prep_guide.md
+
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+
+# OS and Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
