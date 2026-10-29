@@ -1,0 +1,90 @@
+/* ================= ANIMATED NAVBAR ================= */
+
+.nav-animated {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* MENU BOX */
+.nav-animated li {
+  position: relative;
+  list-style: none;
+  width: 52px;
+  height: 52px;
+  background: #020617; /* same as navbar */
+  border-radius: 999px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  overflow: hidden;
+  transition: width 0.45s ease;
+}
+
+/* GRADIENT BACKGROUND */
+.nav-animated li::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: linear-gradient(45deg, var(--i), var(--j));
+  opacity: 0;
+  transition: 0.4s;
+  z-index: 0;
+}
+
+/* GLOW */
+.nav-animated li::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: linear-gradient(45deg, var(--i), var(--j));
+  filter: blur(18px);
+  opacity: 0;
+  transition: 0.4s;
+  z-index: -1;
+}
+
+/* EXPAND */
+.nav-animated li:hover {
+  width: 170px;
+}
+
+.nav-animated li:hover::before {
+  opacity: 1;
+}
+
+.nav-animated li:hover::after {
+  opacity: 0.6;
+}
+
+/* LINK TEXT */
+.nav-animated li a {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #9ca3af;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  transform: scale(0);
+  transition: transform 0.35s ease;
+  z-index: 2;
+}
+
+/* SHOW TEXT ON HOVER */
+.nav-animated li:hover a {
+  color: #fff;
+  transform: scale(1);
+}
