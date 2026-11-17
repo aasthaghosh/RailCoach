@@ -20,7 +20,7 @@ export default function AboutUs() {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:4000/api/v1/send_email", {
+      const res = await fetch("/api/v1/send_email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),

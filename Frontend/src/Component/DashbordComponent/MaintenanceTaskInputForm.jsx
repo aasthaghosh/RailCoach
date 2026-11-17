@@ -24,7 +24,7 @@ const MaintenanceTaskInputForm = ({ coachList, setCoachList }) => {
   useEffect(() => {
     async function fetchCoaches() {
       try {
-        const res = await fetch("http://localhost:4000/api/v1/allcoach", {
+        const res = await fetch("/api/v1/allcoach", {
           credentials: "include",
         });
         const data = await res.json();
@@ -66,7 +66,7 @@ const MaintenanceTaskInputForm = ({ coachList, setCoachList }) => {
     };
 
     try {
-      const res = await fetch("http://localhost:4000/api/v1/taskdata", {
+      const res = await fetch("/api/v1/taskdata", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",

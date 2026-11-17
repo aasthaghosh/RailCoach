@@ -24,7 +24,7 @@ const NavBar = ({ isloggin, setIsloggin, role, user }) => {
     const handleLogout = async () => {
         try {
             await axios.post(
-                "http://localhost:4000/api/v1/logout",
+                "/api/v1/logout",
                 {},
                 { withCredentials: true }
             );

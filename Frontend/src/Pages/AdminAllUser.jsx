@@ -7,7 +7,7 @@ export default function AdminAllUser() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:4000/api/v1/admin/users", {
+    fetch("/api/v1/admin/users", {
       method: "GET",
       credentials: "include",
     })

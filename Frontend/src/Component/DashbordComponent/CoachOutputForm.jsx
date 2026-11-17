@@ -105,7 +105,7 @@ const CoachOutputForm = ({ AddCoach, CountCoachData, role, user }) => {
                 const requestMaintenance = async () => {
                   try {
                     const res = await axios.post(
-                      `http://localhost:4000/api/v1/coach/${coach._id}/request-maintenance`,
+                      `/api/v1/coach/${coach._id}/request-maintenance`,
                       { requestedBy: "user" },
                       { withCredentials: true }
                     );
@@ -130,7 +130,7 @@ const CoachOutputForm = ({ AddCoach, CountCoachData, role, user }) => {
                 const approveMaintenance = async () => {
                   try {
                     const res = await axios.patch(
-                      `http://localhost:4000/api/v1/coach/${coach._id}/approve-maintenance`,
+                      `/api/v1/coach/${coach._id}/approve-maintenance`,
                       {},
                       { withCredentials: true }
                     );

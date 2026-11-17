@@ -99,7 +99,7 @@ const SignupForm = ({ setIsloggin }) => {
     }
 
     try {
-      const res = await fetch("http://localhost:4000/api/v1/singup", {
+      const res = await fetch("/api/v1/singup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",

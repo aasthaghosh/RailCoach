@@ -10,7 +10,7 @@ const AdminPendingTasks = () => {
     async function fetchPendingTasks() {
       try {
         const res = await fetch(
-          "http://localhost:4000/api/v1/admin/pending-tasks",
+          "/api/v1/admin/pending-tasks",
           {
             credentials: "include",
           }
@@ -34,7 +34,7 @@ const AdminPendingTasks = () => {
   const approveTask = async (taskId) => {
     try {
       const res = await fetch(
-        `http://localhost:4000/api/v1/admin/approve-task/${taskId}`,
+        `/api/v1/admin/approve-task/${taskId}`,
         {
           method: "PATCH",
           credentials: "include",
@@ -56,7 +56,7 @@ const AdminPendingTasks = () => {
   const rejectTask = async (taskId) => {
     try {
       const res = await fetch(
-        `http://localhost:4000/api/v1/admin/reject-task/${taskId}`,
+        `/api/v1/admin/reject-task/${taskId}`,
         {
           method: "PATCH",
           credentials: "include",

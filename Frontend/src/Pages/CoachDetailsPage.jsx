@@ -65,7 +65,7 @@ const CoachDetailsPage = ({ AddCoach, UpdateCoachData }) => {
       };
 
       const res = await axios.patch(
-        `http://localhost:4000/api/v1/coach/${coach._id}`,
+        `/api/v1/coach/${coach._id}`,
         payload,
         { withCredentials: true }
       );
@@ -190,7 +190,7 @@ const CoachDetailsPage = ({ AddCoach, UpdateCoachData }) => {
                   onClick={async () => {
                     try {
                       const res = await axios.patch(
-                        `http://localhost:4000/api/v1/coach/${coach._id}/maintenance-done`,
+                        `/api/v1/coach/${coach._id}/maintenance-done`,
                         {},
                         { withCredentials: true }
                       );

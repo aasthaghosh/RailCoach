@@ -20,7 +20,7 @@ export default function AdminUserDetails() {
     setLoading(true);
 
     // fetch user details + populated tasks and completed count
-    fetch(`http://localhost:4000/api/v1/admin/users/${id}`, {
+    fetch(`/api/v1/admin/users/${id}`, {
       credentials: "include",
     })
       .then((r) => r.json())

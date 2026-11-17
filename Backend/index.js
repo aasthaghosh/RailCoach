@@ -21,12 +21,14 @@ app.use(cookieParser());
 //!___________________________TO connect the frontend________________________________
 // to connect the frontend and backend usign the CORS
 // import the CORS
-const cors = require('cors');
-app.use(cors({
-    origin:'http://localhost:5173',
-    credentials: true,
-}))
 
+//const cors = require('cors');
+//app.use(cors({
+//    origin:'http://localhost:5173',
+//    credentials: true,
+//}))
+// Frontend and backend use the same origin through Nginx.
+// CORS is not required for same-origin requests.
 // import the router and mount
 const UserRouter = require("./route/UserRouter");
 const TaskRouter = require("./route/TaskRouter");

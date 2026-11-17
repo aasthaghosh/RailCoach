@@ -26,7 +26,7 @@ const CoachInputForm = ({ AddCoachData }) => {
 
     // to join the backend
     try {
-      const res = await fetch("http://localhost:4000/api/v1/coachdata", {
+      const res = await fetch("/api/v1/coachdata", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(coachData),

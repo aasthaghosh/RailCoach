@@ -33,7 +33,7 @@ const LoginForm = ({ setIsloggin }) => {
   async function submitHandler(e) {
     e.preventDefault();
     try {
-      const res = await fetch("http://localhost:4000/api/v1/login", {
+      const res = await fetch("/api/v1/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include", // ye isliye jisse cookie browser pr dikhe

@@ -32,7 +32,7 @@ function App() {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const res = await axios.get("http://localhost:4000/api/v1/me", {
+        const res = await axios.get("/api/v1/me", {
           withCredentials: true,
         });
         // to find the role of the user and the user object
@@ -64,7 +64,7 @@ function App() {
   useEffect(() => {
     const fetchCoaches = async () => {
       try {
-        const res = await fetch("http://localhost:4000/api/v1/allcoach", {
+        const res = await fetch("/api/v1/allcoach", {
           credentials: "include", //  VERY IMPORTANT
         });
         const data = await res.json();
@@ -122,7 +122,7 @@ function App() {
   useEffect(() => {
     const fetchTask = async () => {
       try {
-        const res = await fetch("http://localhost:4000/api/v1/alltaskdata", {
+        const res = await fetch("/api/v1/alltaskdata", {
           credentials: "include", //  VERY IMPORTANT
         });
         const data = await res.json();
@@ -148,7 +148,7 @@ function App() {
     // mark task as completed (PATCH) so backend increments counters
     axios
       .patch(
-        `http://localhost:4000/api/v1/task/${index}/complete`,
+        `/api/v1/task/${index}/complete`,
         {},
         {
           withCredentials: true,
